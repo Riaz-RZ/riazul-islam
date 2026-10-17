@@ -1,67 +1,46 @@
+"use client";
+
 import Image from "next/image";
+import { FaArrowUp } from "react-icons/fa6";
 
 export default function Footer() {
-  return (
-    <footer className="border-t border-white/10 px-6 py-8">
-      <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-5 sm:flex-row">
-        {/* Logo and copyright */}
-        <div className="text-center sm:text-left">
-          <a
-            href="#home"
-            className="text-lg font-extrabold tracking-tight text-white"
-          >
-            <Image
-              src="/Portfolio-logo.png"
-              alt="Riazul Islam logo"
-              width={160}
-              height={40}
-            />
-          </a>
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
 
-          <p className="mt-1 text-sm text-gray-400">
+  return (
+    <footer className="border-t border-white/10 bg-[#0a0a0a]">
+      <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-5 px-6 py-6 sm:flex-row">
+        {/* Logo - Left */}
+        <div className="flex items-center">
+          <Image
+            src="/signature.png"
+            alt="Riazul Islam"
+            width={160}
+            height={40}
+            className="h-auto w-40 object-contain"
+          />
+        </div>
+
+        {/* Copyright and Back to Top - Right */}
+        <div className="flex flex-col items-center gap-4 sm:flex-row sm:gap-6">
+          <p className="text-center text-sm text-gray-400">
             © {new Date().getFullYear()} Riazul Islam. All rights reserved.
           </p>
-        </div>
 
-        {/* Social links */}
-        <div className="flex flex-wrap items-center justify-center gap-5 text-sm text-gray-400">
-          <a
-            href="https://github.com/Riaz-RZ"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="transition hover:text-emerald-300"
+          <button
+            onClick={scrollToTop}
+            className="group flex items-center gap-2 rounded-full border border-emerald-500/30 px-4 py-2 text-sm text-emerald-400 transition-all duration-300 hover:border-emerald-400 hover:bg-emerald-500/10 hover:text-emerald-300"
+            aria-label="Back to top"
           >
-            GitHub ↗
-          </a>
-
-          <a
-            href="https://www.linkedin.com/in/riazul-islam89"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="transition hover:text-emerald-300"
-          >
-            LinkedIn ↗
-          </a>
-
-          <a
-            href="mailto:riazacc89@gmail.com"
-            className="transition hover:text-emerald-300"
-          >
-            Email ↗
-          </a>
-
-          <a
-            href="#home"
-            className="rounded-lg border border-white/10 px-3 py-2 text-white transition hover:border-emerald-300/40 hover:text-emerald-300"
-          >
-            Back to top ↑
-          </a>
+            Back to Top
+            <FaArrowUp className="transition-transform duration-300 group-hover:-translate-y-1" />
+          </button>
         </div>
       </div>
-
-      <p className="mt-6 text-center text-xs text-gray-500">
-        Designed and built with Next.js, TypeScript & Tailwind CSS.
-      </p>
     </footer>
   );
 }

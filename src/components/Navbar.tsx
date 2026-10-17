@@ -1,6 +1,7 @@
 
 "use client";
 
+import Image from "next/image";
 import { useEffect, useState } from "react";
 
 const navLinks = [
@@ -109,9 +110,13 @@ export default function Navbar() {
             event.preventDefault();
             handleNavClick("#home");
           }}
-          className="text-xl font-bold text-white"
         >
-          RIAZ<span className="text-emerald-300">.</span>
+          <Image
+            src="/signature.png"
+            alt="Riazul Islam logo"
+            width={160}
+            height={40}
+          />
         </a>
 
         <div className="flex items-center gap-2 text-sm">
@@ -127,11 +132,10 @@ export default function Navbar() {
                   handleNavClick(link.href);
                 }}
                 aria-current={isActive ? "location" : undefined}
-                className={`rounded-lg border px-4 py-2 transition-all duration-300 ${
-                  isActive
+                className={`rounded-lg border px-4 py-2 transition-all duration-300 ${isActive
                     ? "border-emerald-300/60 bg-emerald-300/10 text-emerald-300"
                     : "border-transparent text-gray-300 hover:border-white/20 hover:text-emerald-300"
-                }`}
+                  }`}
               >
                 {link.label}
               </a>
