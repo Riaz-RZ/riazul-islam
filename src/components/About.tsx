@@ -55,19 +55,16 @@ const education = [
     title: "Master of Business Administration (MBA)",
     institution: "Accounting",
     period: "2017 – 2018",
-    description: "Grade: 3.80",
   },
   {
     title: "Master of Business Studies (MBS)",
     institution: "Accounting",
     period: "2013 – 2014",
-    description: "Result: First Class",
   },
   {
     title: "Bachelor of Business Studies (BBS)",
     institution: "Accounting",
     period: "2009 – 2012",
-    description: "Result: Second Class",
   },
 ];
 
