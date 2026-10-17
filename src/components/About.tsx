@@ -143,7 +143,7 @@ export default function About() {
       <div
         role="tablist"
         aria-label="About me information"
-        className="mx-auto mb-10 grid max-w-2xl grid-cols-3 gap-2 rounded-2xl border border-white/10 bg-white/[0.03] p-2"
+        className="mx-auto mb-10 grid max-w-2xl grid-cols-3 gap-2 rounded-2xl border border-white/10 bg-white/3 p-2"
       >
         {tabs.map((tab) => {
           const Icon = tab.icon;
@@ -184,7 +184,7 @@ export default function About() {
             {skills.map((group) => (
               <div
                 key={group.category}
-                className="rounded-2xl border border-white/10 bg-white/[0.03] p-6 transition duration-300 hover:-translate-y-1 hover:border-emerald-400/30"
+                className="rounded-2xl border border-white/10 bg-white/3 p-6 transition duration-300 hover:-translate-y-1 hover:border-emerald-400/30"
               >
                 <div className="mb-5 flex h-11 w-11 items-center justify-center rounded-xl bg-emerald-400/10 text-emerald-300">
                   <FaCode size={20} />
@@ -215,7 +215,7 @@ export default function About() {
             {education.map((item) => (
               <article
                 key={item.title}
-                className="relative rounded-2xl border border-white/10 bg-white/[0.03] p-5 transition duration-300 hover:border-emerald-400/30 sm:p-7"
+                className="relative rounded-2xl border border-white/10 bg-white/3 p-5 transition duration-300 hover:border-emerald-400/30 sm:p-7"
               >
                 <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
                   <div className="flex gap-4">
@@ -238,7 +238,7 @@ export default function About() {
                     </div>
                   </div>
 
-                  <span className="shrink-0 self-start rounded-lg border border-white/10 bg-white/[0.03] px-3 py-2 text-xs text-gray-400">
+                  <span className="shrink-0 self-start rounded-lg border border-white/10 bg-white/3 px-3 py-2 text-xs text-gray-400">
                     {item.period}
                   </span>
                 </div>
@@ -253,7 +253,7 @@ export default function About() {
             {experience.map((item) => (
               <article
                 key={item.title}
-                className="rounded-2xl border border-white/10 bg-white/[0.03] p-5 transition duration-300 hover:border-emerald-400/30 sm:p-7"
+                className="rounded-2xl border border-white/10 bg-white/3 p-5 transition duration-300 hover:border-emerald-400/30 sm:p-7"
               >
                 <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
                   <div className="flex gap-4">
@@ -272,7 +272,7 @@ export default function About() {
                     </div>
                   </div>
 
-                  <span className="shrink-0 self-start rounded-lg border border-white/10 bg-white/[0.03] px-3 py-2 text-xs text-gray-400">
+                  <span className="shrink-0 self-start rounded-lg border border-white/10 bg-white/3 px-3 py-2 text-xs text-gray-400">
                     {item.period}
                   </span>
                 </div>

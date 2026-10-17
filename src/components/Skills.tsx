@@ -1,21 +1,11 @@
 
 "use client";
+import RotatingEarth from "@/components/RotatingEarth";
 
 import {
-  SiReact,
+
   SiNextdotjs,
-  SiTypescript,
-  SiJavascript,
-  SiTailwindcss,
-  SiNodedotjs,
-  SiExpress,
-  SiMongodb,
-  SiGit,
-  SiGithub,
-  SiKotlin,
-  SiHtml5,
-  SiCss,
-  SiBootstrap,
+
 } from "react-icons/si";
 import {
   FaGraduationCap,
@@ -25,22 +15,7 @@ import {
   FaFileInvoiceDollar,
 } from "react-icons/fa6";
 
-const skills = [
-  { name: "HTML5", icon: SiHtml5, color: "#E34F26" },
-  { name: "CSS3", icon: SiCss, color: "#1572B6" },
-  { name: "JavaScript", icon: SiJavascript, color: "#F7DF1E" },
-  { name: "TypeScript", icon: SiTypescript, color: "#3178C6" },
-  { name: "React", icon: SiReact, color: "#61DAFB" },
-  { name: "Next.js", icon: SiNextdotjs, color: "#FFFFFF" },
-  { name: "Tailwind CSS", icon: SiTailwindcss, color: "#06B6D4" },
-  { name: "Bootstrap", icon: SiBootstrap, color: "#7952B3" },
-  { name: "Node.js", icon: SiNodedotjs, color: "#5FA04E" },
-  { name: "Express.js", icon: SiExpress, color: "#FFFFFF" },
-  { name: "MongoDB", icon: SiMongodb, color: "#47A248" },
-  { name: "Git", icon: SiGit, color: "#F05032" },
-  { name: "GitHub", icon: SiGithub, color: "#FFFFFF" },
-  { name: "Kotlin", icon: SiKotlin, color: "#7F52FF" },
-];
+
 
 const certifications = [
   {
@@ -82,7 +57,7 @@ export default function Skills() {
       className="relative mx-auto max-w-7xl px-6 py-20 md:py-28"
     >
       {/* Section heading */}
-      <div className="mb-14 text-center">
+      <div className="mb-18 text-center">
         <p className="mb-3 text-sm font-semibold uppercase tracking-[0.25em] text-emerald-300">
           My Expertise
         </p>
@@ -99,7 +74,7 @@ export default function Skills() {
 
       {/* Part 1: Skills I Use */}
       <div>
-        <div className="mb-7 flex items-center gap-3">
+        <div className="mb-5 flex items-center gap-3">
           <div className="flex h-11 w-11 items-center justify-center rounded-xl border border-emerald-400/20 bg-emerald-400/10 text-emerald-300">
             <SiNextdotjs size={23} />
           </div>
@@ -113,35 +88,15 @@ export default function Skills() {
             </p>
           </div>
         </div>
-
-        <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-7">
-          {skills.map((skill) => {
-            const Icon = skill.icon;
-
-            return (
-              <div
-                key={skill.name}
-                className="group flex min-h-32 flex-col items-center justify-center gap-4 rounded-2xl border border-white/10 bg-white/3 p-4 text-center transition-all duration-300 hover:-translate-y-1 hover:border-emerald-400/40 hover:bg-emerald-400/5 hover:shadow-lg hover:shadow-emerald-950/20"
-              >
-                <Icon
-                  size={34}
-                  aria-hidden="true"
-                  style={{ color: skill.color }}
-                  className="transition-transform duration-300 group-hover:scale-110"
-                />
-
-                <span className="text-sm font-medium text-gray-300 transition-colors group-hover:text-white">
-                  {skill.name}
-                </span>
-              </div>
-            );
-          })}
-        </div>
       </div>
 
+      <div className="mb-8">
+  <RotatingEarth />
+</div>
+
       {/* Part 2: Certifications */}
-      <div className="mt-20">
-        <div className="mb-7 flex items-center gap-3">
+      <div className="mt-30">
+        <div className="mb-10 flex items-center gap-3">
           <div className="flex h-11 w-11 items-center justify-center rounded-xl border border-emerald-400/20 bg-emerald-400/10 text-emerald-300">
             <FaGraduationCap size={23} />
           </div>

@@ -7,7 +7,6 @@ import {
   FaGithub,
   FaEnvelope,
   FaArrowUpRightFromSquare,
-  FaFilePdf,
 } from "react-icons/fa6";
 
 export default function Hero() {
@@ -54,56 +53,89 @@ export default function Hero() {
 
         {/* Action buttons */}
         <div className="mt-8 flex flex-wrap items-center gap-4">
+
           <a
             href="#projects"
-            className="inline-flex items-center gap-2 rounded-xl bg-emerald-400 px-6 py-3 font-semibold text-gray-950 transition duration-300 hover:-translate-y-1 hover:bg-emerald-300 hover:shadow-lg hover:shadow-emerald-400/20"
+            className="explore-btn group inline-flex items-center gap-3 rounded-xl px-6 py-3 font-semibold text-gray-950"
           >
-            Explore My Work
-            <FaArrowUpRightFromSquare className="text-sm" />
+            <span>Explore My Work</span>
+            <FaArrowUpRightFromSquare className="text-sm transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1" />
           </a>
 
-          <a
-            href="/Riazul-Islam-Resume.pdf"
-            download
-            className="inline-flex items-center gap-2 rounded-xl border border-white/15 bg-white/3 px-6 py-3 font-semibold text-white transition duration-300 hover:-translate-y-1 hover:border-emerald-400/50 hover:bg-emerald-400/5"
-          >
-            <FaFilePdf className="text-emerald-300" />
-            Download Resume
+
+
+          <a href="/Riazul-Islam-Resume.pdf" download className="induction-btn">
+            <span className="induction-btn__field" aria-hidden="true" />
+            <span className="induction-btn__content">
+              <svg
+                width="21"
+                height="21"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="1.8"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                aria-hidden="true"
+              >
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                <path d="m7 10 5 5 5-5" />
+                <path d="M12 15V3" />
+              </svg>
+              <span>Download Resume</span>
+            </span>
           </a>
+
         </div>
 
+
         {/* Social links */}
-        <div className="mt-8 flex flex-wrap items-center gap-3">
-          <span className="mr-2 text-sm text-gray-500">
+        <div className="mt-9 flex flex-wrap items-center gap-4">
+          <span className="mr-1 text-sm font-medium tracking-wide text-gray-500">
             Connect with me
           </span>
 
+          {/* LinkedIn */}
           <a
             href="https://www.linkedin.com/in/riazul-islam89"
             target="_blank"
             rel="noopener noreferrer"
-            aria-label="LinkedIn profile"
-            className="flex h-11 w-11 items-center justify-center rounded-xl border border-white/10 bg-white/3 text-gray-300 transition duration-300 hover:-translate-y-1 hover:border-emerald-400/40 hover:text-emerald-300"
+            aria-label="Visit my LinkedIn profile"
+            title="LinkedIn"
+            className="social-link social-link--linkedin"
           >
-            <FaLinkedinIn size={18} />
+            <span className="social-link__icon">
+              <FaLinkedinIn size={19} />
+            </span>
+            <span className="social-link__label">LinkedIn</span>
           </a>
 
+          {/* GitHub */}
           <a
             href="https://github.com/Riaz-RZ"
             target="_blank"
             rel="noopener noreferrer"
-            aria-label="GitHub profile"
-            className="flex h-11 w-11 items-center justify-center rounded-xl border border-white/10 bg-white/3 text-gray-300 transition duration-300 hover:-translate-y-1 hover:border-emerald-400/40 hover:text-emerald-300"
+            aria-label="Visit my GitHub profile"
+            title="GitHub"
+            className="social-link social-link--github"
           >
-            <FaGithub size={18} />
+            <span className="social-link__icon">
+              <FaGithub size={19} />
+            </span>
+            <span className="social-link__label">GitHub</span>
           </a>
 
+          {/* Email */}
           <a
             href="mailto:your-riazacc89@gmail.com"
-            aria-label="Send email"
-            className="flex h-11 w-11 items-center justify-center rounded-xl border border-white/10 bg-white/3 text-gray-300 transition duration-300 hover:-translate-y-1 hover:border-emerald-400/40 hover:text-emerald-300"
+            aria-label="Send me an email"
+            title="Email"
+            className="social-link social-link--email"
           >
-            <FaEnvelope size={18} />
+            <span className="social-link__icon">
+              <FaEnvelope size={18} />
+            </span>
+            <span className="social-link__label">Email</span>
           </a>
         </div>
       </div>
