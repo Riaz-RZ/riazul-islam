@@ -46,7 +46,8 @@ const skills = [
 const education = [
   {
     title: "Diploma in Full Stack Development (MERN)",
-    institution: "Daffodil International Professional Training Institute",
+    institution:
+      "Daffodil International Professional Training Institute",
     period: "Jan – Dec 2025",
     description:
       "Professional training focused on full-stack web development using the MERN stack.",
@@ -99,9 +100,7 @@ const experience = [
     period: "Volunteer Experience",
     description:
       "Volunteer experience with the Fire Service and Civil Defence Directorate.",
-    points: [
-      "Experience contributing in a volunteer capacity.",
-    ],
+    points: ["Experience contributing in a volunteer capacity."],
   },
 ];
 
@@ -117,11 +116,11 @@ export default function About() {
   return (
     <section
       id="about"
-      className="relative mx-auto max-w-7xl px-6 py-20 md:py-28"
+      className="relative mx-auto max-w-7xl scroll-mt-20 px-4 py-16 sm:px-6 sm:py-20 md:py-24 lg:px-8 lg:py-28"
     >
       {/* Section heading */}
-      <div className="mx-auto mb-12 max-w-2xl text-center">
-        <p className="mb-3 text-sm font-semibold uppercase tracking-[0.25em] text-emerald-300">
+      <div className="mx-auto mb-8 max-w-2xl text-center sm:mb-12">
+        <p className="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-emerald-300 sm:text-sm sm:tracking-[0.25em]">
           Get to know me
         </p>
 
@@ -129,18 +128,18 @@ export default function About() {
           About <span className="text-emerald-300">Me</span>
         </h2>
 
-        <p className="mt-5 text-base leading-8 text-gray-400">
+        <p className="mx-auto mt-4 max-w-xl text-sm leading-7 text-gray-400 sm:mt-5 sm:text-base sm:leading-8">
           I’m Md Riazul Islam, a developer with an accounting background,
           focused on building modern, responsive, and user-friendly web
           applications. Explore my skills, education, and professional journey.
         </p>
       </div>
 
-      {/* Tabs */}
+      {/* Responsive tabs */}
       <div
         role="tablist"
         aria-label="About me information"
-        className="mx-auto mb-10 grid max-w-2xl grid-cols-3 gap-2 rounded-2xl border border-white/10 bg-white/3 p-2"
+        className="mx-auto mb-8 grid w-full max-w-2xl grid-cols-3 gap-1.5 rounded-xl border border-white/10 bg-white/3 p-1.5 sm:mb-10 sm:gap-2 sm:rounded-2xl sm:p-2"
       >
         {tabs.map((tab) => {
           const Icon = tab.icon;
@@ -155,14 +154,14 @@ export default function About() {
               aria-selected={isActive}
               aria-controls="about-tab-panel"
               onClick={() => setActiveTab(tab.id)}
-              className={`flex items-center justify-center gap-2 rounded-xl px-3 py-3 text-sm font-medium transition-all duration-300 sm:px-5 ${
+              className={`flex min-w-0 items-center justify-center gap-1.5 rounded-lg px-1.5 py-3 text-xs font-medium transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-300 sm:gap-2 sm:rounded-xl sm:px-4 sm:text-sm ${
                 isActive
                   ? "bg-emerald-400 text-gray-950 shadow-lg shadow-emerald-400/10"
                   : "text-gray-400 hover:bg-white/5 hover:text-white"
               }`}
             >
-              <Icon className="shrink-0" />
-              {tab.label}
+              <Icon className="shrink-0 text-sm sm:text-base" />
+              <span className="truncate">{tab.label}</span>
             </button>
           );
         })}
@@ -173,21 +172,22 @@ export default function About() {
         id="about-tab-panel"
         role="tabpanel"
         aria-labelledby={`about-tab-${activeTab}`}
-        className="mx-auto max-w-5xl"
+        tabIndex={0}
+        className="mx-auto max-w-5xl focus-visible:outline-none"
       >
         {/* Skills */}
         {activeTab === "skills" && (
-          <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-5 lg:grid-cols-3">
             {skills.map((group) => (
-              <div
+              <article
                 key={group.category}
-                className="rounded-2xl border border-white/10 bg-white/3 p-6 transition duration-300 hover:-translate-y-1 hover:border-emerald-400/30"
+                className="min-w-0 rounded-2xl border border-white/10 bg-white/3 p-4 transition duration-300 hover:border-emerald-400/30 sm:p-5 lg:p-6"
               >
-                <div className="mb-5 flex h-11 w-11 items-center justify-center rounded-xl bg-emerald-400/10 text-emerald-300">
+                <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-xl bg-emerald-400/10 text-emerald-300 sm:mb-5 sm:h-11 sm:w-11">
                   <FaCode size={20} />
                 </div>
 
-                <h3 className="mb-4 text-lg font-semibold text-white">
+                <h3 className="mb-4 text-base font-semibold leading-6 text-white sm:text-lg">
                   {group.category}
                 </h3>
 
@@ -195,47 +195,49 @@ export default function About() {
                   {group.items.map((skill) => (
                     <span
                       key={skill}
-                      className="rounded-lg border border-white/10 bg-[#101522] px-3 py-2 text-sm text-gray-300"
+                      className="max-w-full wrap-break-word rounded-lg border border-white/10 bg-[#101522] px-2.5 py-2 text-xs leading-5 text-gray-300 sm:px-3 sm:text-sm"
                     >
                       {skill}
                     </span>
                   ))}
                 </div>
-              </div>
+              </article>
             ))}
           </div>
         )}
 
         {/* Education */}
         {activeTab === "education" && (
-          <div className="relative space-y-5">
+          <div className="space-y-4 sm:space-y-5">
             {education.map((item) => (
               <article
                 key={item.title}
-                className="relative rounded-2xl border border-white/10 bg-white/3 p-5 transition duration-300 hover:border-emerald-400/30 sm:p-7"
+                className="min-w-0 rounded-2xl border border-white/10 bg-white/3 p-4 transition duration-300 hover:border-emerald-400/30 sm:p-6 lg:p-7"
               >
-                <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
-                  <div className="flex gap-4">
-                    <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-emerald-400/10 text-emerald-300">
+                <div className="flex min-w-0 flex-col gap-3 sm:gap-4 md:flex-row md:items-start md:justify-between">
+                  <div className="flex min-w-0 items-start gap-3 sm:gap-4">
+                    <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-emerald-400/10 text-emerald-300 sm:h-11 sm:w-11">
                       <FaGraduationCap size={20} />
                     </div>
 
-                    <div>
-                      <h3 className="text-lg font-semibold text-white">
+                    <div className="min-w-0 flex-1">
+                      <h3 className="wrap-break-word text-base font-semibold leading-6 text-white sm:text-lg">
                         {item.title}
                       </h3>
 
-                      <p className="mt-1 text-sm text-emerald-300">
+                      <p className="mt-1 wrap-break-word text-sm leading-6 text-emerald-300">
                         {item.institution}
                       </p>
 
-                      <p className="mt-3 text-sm leading-7 text-gray-400">
-                        {item.description}
-                      </p>
+                      {item.description && (
+                        <p className="mt-3 text-sm leading-7 text-gray-400">
+                          {item.description}
+                        </p>
+                      )}
                     </div>
                   </div>
 
-                  <span className="shrink-0 self-start rounded-lg border border-white/10 bg-white/3 px-3 py-2 text-xs text-gray-400">
+                  <span className="ml-13 w-fit max-w-full shrink-0 wrap-break-word rounded-lg border border-white/10 bg-white/3 px-3 py-2 text-xs leading-5 text-gray-400 sm:ml-15 md:ml-0">
                     {item.period}
                   </span>
                 </div>
@@ -246,35 +248,35 @@ export default function About() {
 
         {/* Experience */}
         {activeTab === "experience" && (
-          <div className="space-y-5">
+          <div className="space-y-4 sm:space-y-5">
             {experience.map((item) => (
               <article
                 key={item.title}
-                className="rounded-2xl border border-white/10 bg-white/3 p-5 transition duration-300 hover:border-emerald-400/30 sm:p-7"
+                className="min-w-0 rounded-2xl border border-white/10 bg-white/3 p-4 transition duration-300 hover:border-emerald-400/30 sm:p-6 lg:p-7"
               >
-                <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
-                  <div className="flex gap-4">
-                    <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-emerald-400/10 text-emerald-300">
+                <div className="flex min-w-0 flex-col gap-3 sm:gap-4 md:flex-row md:items-start md:justify-between">
+                  <div className="flex min-w-0 items-start gap-3 sm:gap-4">
+                    <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-emerald-400/10 text-emerald-300 sm:h-11 sm:w-11">
                       <FaBriefcase size={18} />
                     </div>
 
-                    <div>
-                      <h3 className="text-lg font-semibold text-white">
+                    <div className="min-w-0 flex-1">
+                      <h3 className="wrap-break-word text-base font-semibold leading-6 text-white sm:text-lg">
                         {item.title}
                       </h3>
 
-                      <p className="mt-1 text-sm text-emerald-300">
+                      <p className="mt-1 wrap-break-word text-sm leading-6 text-emerald-300">
                         {item.organization}
                       </p>
                     </div>
                   </div>
 
-                  <span className="shrink-0 self-start rounded-lg border border-white/10 bg-white/3 px-3 py-2 text-xs text-gray-400">
+                  <span className="ml-13 w-fit max-w-full shrink-0 wrap-break-word rounded-lg border border-white/10 bg-white/3 px-3 py-2 text-xs leading-5 text-gray-400 sm:ml-15 md:ml-0">
                     {item.period}
                   </span>
                 </div>
 
-                <p className="mt-5 text-sm leading-7 text-gray-400">
+                <p className="mt-4 text-sm leading-7 text-gray-400 sm:mt-5">
                   {item.description}
                 </p>
 
@@ -282,10 +284,10 @@ export default function About() {
                   {item.points.map((point) => (
                     <li
                       key={point}
-                      className="flex items-start gap-3 text-sm leading-6 text-gray-300"
+                      className="flex items-start gap-2.5 text-sm leading-6 text-gray-300 sm:gap-3"
                     >
                       <FaCheckCircle className="mt-1 shrink-0 text-emerald-300" />
-                      <span>{point}</span>
+                      <span className="min-w-0">{point}</span>
                     </li>
                   ))}
                 </ul>
@@ -296,13 +298,13 @@ export default function About() {
       </div>
 
       {/* More about my work */}
-      <div className="mt-10 text-center">
+      <div className="mt-8 text-center sm:mt-10">
         <a
           href="#projects"
-          className="inline-flex items-center gap-2 text-sm font-medium text-emerald-300 transition hover:text-emerald-200"
+          className="inline-flex items-center justify-center gap-2 rounded-lg text-sm font-medium text-emerald-300 transition hover:text-emerald-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-300 focus-visible:ring-offset-4 focus-visible:ring-offset-[#080b12]"
         >
           Explore my projects
-          <FaArrowRight className="transition-transform duration-300 hover:translate-x-1" />
+          <FaArrowRight className="transition-transform duration-300 group-hover:translate-x-1" />
         </a>
       </div>
     </section>
