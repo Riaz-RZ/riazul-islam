@@ -51,7 +51,7 @@ const projects = [
     category: "Inventory Management System",
     description:
       "A warehouse management application designed to help administrators and staff manage products, track stock-in and stock-out operations, transfer inventory, and monitor stock levels through a user-friendly dashboard.",
-    image: "/projects/warehouse-inventory.png",
+    image: "/projects/warehouseinventory.webp",
     technologies: [
       "React",
       "Node.js",
