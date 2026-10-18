@@ -1,36 +1,162 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 👨‍💻 Md Riazul Islam — Developer Portfolio
 
-## Getting Started
+Welcome to my personal portfolio repository! I'm **Md Riazul Islam**, an aspiring Full Stack Web Developer from Bangladesh, passionate about building modern, responsive, and user-friendly web applications.
 
-First, run the development server:
+This portfolio showcases my technical skills, projects, educational background, and journey from accounting to web development.
+
+## 🌐 Live Portfolio
+
+🔗 **Portfolio Website:** [Visit My Portfolio](https://riazul-islam.vercel.app/)
+
+> If your deployed portfolio uses a different URL, replace the link above with your actual live URL.
+
+## ✨ Features
+
+- 📱 Fully responsive design for mobile, tablet, and desktop
+- 🌙 Modern dark theme with emerald accents
+- 👋 Hero section with introduction and social links
+- 🙋 About section with skills, education, and experience
+- 🛠️ Technical skills and technologies
+- 🚀 Project showcase with project details and live demos
+- 📈 Interactive career and learning journey timeline
+- 📬 Contact section with email and social links
+- ⬆️ Smooth scrolling and back-to-top navigation
+- 🎨 Animated elements and interactive UI components
+
+## 🛠️ Technologies Used
+
+| Technology | Purpose |
+|---|---|
+| Next.js | React framework and application structure |
+| React | Building reusable UI components |
+| TypeScript | Type-safe development |
+| Tailwind CSS | Responsive styling and UI design |
+| React Icons | Icons and visual elements |
+| Git & GitHub | Version control and source code management |
+| Vercel | Deployment |
+
+## 🚀 Featured Projects
+
+### 1. Bazar Dor — বাজার দর
+
+A Bengali-language market price website designed to display the prices of essential products in Bangladesh.
+
+- **Technologies:** Next.js, TypeScript, Tailwind CSS, REST API
+- **Features:** Product listings, categories, price comparisons, and price-change indicators
+- **Live Demo:** [View Bazar Dor](https://bazar-dor-two-tau.vercel.app/)
+- **Source Code:** [GitHub Repository](https://github.com/Riaz-RZ/Bazar-Dor)
+
+### 2. FitLog
+
+A fitness-focused web application project built to practice modern frontend development and responsive UI design.
+
+- **Technologies:** Next.js, TypeScript, Tailwind CSS, DaisyUI
+- **Status:** In Development
+- **Live Demo:** [View FitLog](https://ph-a6-fit-log-five.vercel.app/)
+- **Source Code:** [GitHub Repository](https://github.com/Riaz-RZ/PH-A6-FitLog)
+
+### 3. Warehouse Inventory Management
+
+A warehouse inventory management project focused on practicing full-stack development, inventory operations, and database integration.
+
+- **Technologies:** React, Node.js, Express.js, MongoDB, Tailwind CSS
+- **Status:** In Development
+- **Source Code:** [GitHub Repository](https://github.com/Riaz-RZ/Warehouse-Inventory-Management)
+
+## 🎓 About Me
+
+My background in accounting has helped me develop analytical thinking, attention to detail, and an understanding of business processes. I'm now applying these skills to software development.
+
+I am currently learning and improving my skills in:
+
+- Full Stack Web Development
+- Next.js and TypeScript
+- React and Tailwind CSS
+- Node.js, Express.js, and MongoDB
+- Building practical, responsive web applications
+
+I'm also pursuing the **AI-Driven Full Stack Web Engineering** course with Programming Hero to strengthen my development skills.
+
+## ⚙️ Run Locally
+
+Follow these steps to run the portfolio on your local machine.
+
+### Prerequisites
+
+- Node.js installed
+- npm installed
+- Git installed
+
+### Installation
+
+**1. Clone the repository**
+
+```bash
+git clone https://github.com/Riaz-RZ/riazul-islam.git
+```
+
+**2. Navigate to the project directory**
+
+```bash
+cd riazul-islam
+```
+
+**3. Install dependencies**
+
+```bash
+npm install
+```
+
+**4. Start the development server**
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+**5. Open the application**
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Visit [http://localhost:3000](http://localhost:3000) in your browser.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 📁 Project Structure
 
-## Learn More
+```text
+riazul-islam/
+├── public/
+│   ├── projects/
+│   └── signature.png
+├── src/
+│   └── components/
+│       ├── Navbar.tsx
+│       ├── Hero.tsx
+│       ├── About.tsx
+│       ├── Skills.tsx
+│       ├── Projects.tsx
+│       ├── Journey.tsx
+│       ├── Contact.tsx
+│       └── Footer.tsx
+├── package.json
+├── tsconfig.json
+└── README.md
+```
 
-To learn more about Next.js, take a look at the following resources:
+*The structure above is illustrative. Adjust the filenames and folders to match your actual repository.*
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 📬 Connect With Me
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- **GitHub:** [Riaz-RZ](https://github.com/Riaz-RZ)
+- **LinkedIn:** [Md Riazul Islam](https://www.linkedin.com/in/riazul-islam89)
+- **Email:** [riazacc89@gmail.com](mailto:riazacc89@gmail.com)
+- **Location:** Dhaka, Bangladesh
 
-## Deploy on Vercel
+## 🎯 My Goal
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+My goal is to become a skilled Full Stack Developer by continuously learning, building real-world projects, writing maintainable code, and creating useful digital experiences.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+I'm open to learning opportunities, collaboration, and junior web development opportunities.
+
+---
+
+⭐ If you find my work interesting, feel free to explore my repositories and connect with me!
+
+**Built with ❤️ by Md Riazul Islam**
+
