@@ -76,13 +76,20 @@ export default function Hero() {
       {/* Introduction */}
       <div className="relative z-10 order-2 min-w-0 pt-3 md:order-1 md:pt-0">
         {/* Availability badge */}
+
         <div className="mb-5 inline-flex max-w-full items-center gap-2 rounded-full border border-emerald-400/20 bg-emerald-400/5 px-3 py-2 text-xs text-emerald-300 sm:mb-6 sm:px-4 sm:text-sm">
+          {/* Blinking dot */}
           <span className="relative flex h-2 w-2 shrink-0">
             <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75" />
             <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-400" />
           </span>
-          <span>Full Stack Developer in Bangladesh</span>
+
+          {/* Blinking text */}
+          <span className="animate-pulse">
+            Full Stack Developer in Bangladesh
+          </span>
         </div>
+
 
         {/* Main heading */}
         <h1 className="max-w-2xl text-3xl font-bold leading-tight tracking-tight text-white min-[400px]:text-4xl sm:text-5xl md:text-4xl lg:text-5xl xl:text-6xl">
