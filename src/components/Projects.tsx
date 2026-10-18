@@ -113,7 +113,7 @@ export default function Projects() {
   return (
     <section
       id="projects"
-      className="mx-auto max-w-7xl scroll-mt-20 px-4 py-16 sm:px-6 sm:py-20 md:py-24 lg:px-8 lg:py-28"
+      className="mx-auto max-w-7xl scroll-mt-36 px-4 py-16 sm:px-6 sm:py-20 md:py-24 lg:px-8 lg:py-28"
     >
       {/* Section heading */}
       <div className="mb-9 flex flex-col gap-5 sm:mb-12 lg:mb-14 lg:flex-row lg:items-end lg:justify-between">

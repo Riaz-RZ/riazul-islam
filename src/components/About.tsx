@@ -116,7 +116,7 @@ export default function About() {
   return (
     <section
       id="about"
-      className="relative mx-auto max-w-7xl scroll-mt-20 px-4 py-16 sm:px-6 sm:py-20 md:py-24 lg:px-8 lg:py-28"
+      className="relative mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 md:py-24 lg:px-8 lg:py-28 scroll-mt-24"
     >
       {/* Section heading */}
       <div className="mx-auto mb-8 max-w-2xl text-center sm:mb-12">

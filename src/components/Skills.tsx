@@ -55,7 +55,7 @@ export default function Skills() {
   return (
     <section
       id="skills"
-      className="relative mx-auto max-w-7xl px-6 py-20 md:py-28"
+      className="relative mx-auto max-w-7xl px-6 py-20 md:py-28 scroll-mt-32"
     >
       {/* Section heading */}
       <div className="mb-18 text-center">

@@ -103,21 +103,38 @@ export default function Navbar() {
     return () => window.removeEventListener("keydown", handleKeyDown);
   }, []);
 
-  const handleNavClick = (href: string) => {
-    const section = document.querySelector<HTMLElement>(href);
 
-    setMenuOpen(false);
-    setActiveLink(href);
+const handleNavClick = (href: string) => {
+  const section = document.querySelector<HTMLElement>(href);
 
-    if (!section) return;
+  if (!section) return;
 
-    window.history.replaceState(null, "", href);
+  // Update the active navigation link.
+  setActiveLink(href);
 
-    section.scrollIntoView({
-      behavior: "smooth",
-      block: "start",
-    });
-  };
+  // Close the mobile menu.
+  setMenuOpen(false);
+
+  // Update the URL without triggering the browser's default jump.
+  window.history.replaceState(null, "", href);
+
+  // Calculate the section position below the sticky navbar.
+  const navbar = document.querySelector("header");
+  const navbarHeight = navbar?.getBoundingClientRect().height ?? 0;
+  const extraSpacing = 16;
+  const sectionTop =
+    section.getBoundingClientRect().top + window.scrollY;
+
+  window.scrollTo({
+    top: Math.max(0, sectionTop - navbarHeight - extraSpacing),
+    behavior: window.matchMedia("(prefers-reduced-motion: reduce)")
+      .matches
+      ? "auto"
+      : "smooth",
+  });
+};
+
+
 
   return (
     <header className="sticky top-0 z-50 border-b border-white/10 bg-[#080b12]/90 backdrop-blur-xl">

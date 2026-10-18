@@ -41,7 +41,7 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="relative scroll-mt-20 overflow-hidden border-t border-white/10 px-4 py-16 sm:px-6 sm:py-20 md:py-24 lg:px-8 lg:py-28"
+      className="relative scroll-mt-24 overflow-hidden border-t border-white/10 px-4 py-16 sm:px-6 sm:py-20 md:py-24 lg:px-8 lg:py-28"
     >
       {/* Background accents */}
       <div
