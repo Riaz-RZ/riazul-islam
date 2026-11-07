@@ -13,6 +13,33 @@ import {
 
 const projects = [
   {
+  title: "BookNook",
+  category: "Library Management System",
+  description:
+    "A full-stack online library management platform that allows users to explore books, manage their book collections, borrow and return books, and track their borrowing history through a modern, responsive interface.",
+  image: "/projects/booknook.png",
+  technologies: [
+    "Next.js",
+    "TypeScript",
+    "Tailwind CSS",
+    "Shadcn UI",
+    "Node.js",
+    "Express.js",
+    "MongoDB",
+  ],
+  liveUrl: "https://library-booknook.vercel.app/",
+  githubUrl: "https://github.com/Riaz-RZ/booknook",
+  status: "Live Project",
+  features: [
+    "Browse, search, and explore available books.",
+    "View detailed book information and availability.",
+    "Borrow and return books with automatic copy management.",
+    "Prevent users from borrowing the same book more than once.",
+    "Track personal borrowing history.",
+    "Manage books through a responsive interface.",
+  ],
+},
+  {
     title: "Bazar Dor",
     category: "Web Application",
     description:
@@ -44,33 +71,8 @@ const projects = [
       "Use a modern and responsive interface.",
       "Navigate a clean application layout.",
       "Built with reusable components and modern web technologies.",
-    ],
-  },
-  {
-    title: "Warehouse Inventory Management",
-    category: "Inventory Management System",
-    description:
-      "A warehouse management application designed to help administrators and staff manage products, track stock-in and stock-out operations, transfer inventory, and monitor stock levels through a user-friendly dashboard.",
-    image: "/projects/warehouseinventory.webp",
-    technologies: [
-      "React",
-      "Node.js",
-      "Express.js",
-      "MongoDB",
-      "Tailwind CSS",
-    ],
-    liveUrl: "",
-    githubUrl:
-      "https://github.com/Riaz-RZ/Warehouse-Inventory-Management",
-    status: "In Development",
-    features: [
-      "Admin and staff role-based access.",
-      "Manage products and inventory records.",
-      "Track stock-in and stock-out operations.",
-      "Transfer stock and monitor inventory levels.",
-      "Manage inventory through a dashboard.",
-    ],
-  },
+    ]
+  }
 ];
 
 type Project = (typeof projects)[number];
