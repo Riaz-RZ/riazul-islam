@@ -21,11 +21,11 @@ const projects = [
   technologies: [
     "Next.js",
     "TypeScript",
-    "Tailwind CSS",
-    "Shadcn UI",
     "Node.js",
     "Express.js",
     "MongoDB",
+    "JWT",
+    "Better-Auth",
   ],
   liveUrl: "https://library-booknook.vercel.app/",
   githubUrl: "https://github.com/Riaz-RZ/booknook",
